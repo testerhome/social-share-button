@@ -28,6 +28,10 @@ window.SocialShareButton =
         via_str = ''
         via_str = "&via=#{via}" if via.length > 0
         SocialShareButton.openUrl("https://twitter.com/intent/tweet?url=#{url}&text=#{title}#{via_str}",popup)
+      when "linkedin"
+        via_str = ''
+        via_str = "&via=#{via}" if via.length > 0
+        SocialShareButton.openUrl("http://www.linkedin.com/shareArticle?mini=true&url=#{url}&title=#{title}#{via_str}&source=#{url}",popup)
       when "douban"
         SocialShareButton.openUrl("http://shuo.douban.com/!service/share?href=#{url}&name=#{title}&image=#{img}&sel=#{desc}",popup)
       when "facebook"
